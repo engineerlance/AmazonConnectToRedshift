@@ -20,7 +20,7 @@ functions:
             - prefix: connect/ctr/
           existing: true
     environment:
-      redshiftObjectsBucket: "cats-prod-bucket"
+      redshiftObjectsBucket: "staging-bucket"
 
   loadCTR:
     handler: src/handlers/loadCTR.main
