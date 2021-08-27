@@ -1,0 +1,21 @@
+{
+  "jsonpaths": [
+    "$.CTRRecord.RecordId",
+    "$.CTRRecord.LastUpdateTimestamp",
+    "$.CTRRecord.AWSAccountId",
+    "$.CTRRecord.AgentId",
+    "$.CTRRecord.QueueId",
+    "$.CTRRecord.Channel",
+    "$.CTRRecord.CustomerId",
+    "$.CTRRecord.AgentInteractionDuration",
+    "$.CTRRecord.CustomerHoldDuration",
+    "$.CTRRecord.ConnectedTimestamp",
+    "$.CTRRecord.DisconnectTimestamp",
+    "$.CTRRecord.DisconnectReason",
+    "$.CTRRecord.AgentConnectionAttempts",
+    "$.CTRRecord.InitiationMethod",
+    "$.CTRRecord.QueueDuration",
+    "$.CTRRecord.CustomerIntent",
+    "$.CTRRecord.WithVoiceMail"
+  ]
+}

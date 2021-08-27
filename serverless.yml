@@ -1,0 +1,49 @@
+service: ConnectCTR-Redshift
+
+frameworkVersion: "2"
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  region: eu-central-1
+  #role: todo
+  lambdaHashingVersion: 20201221
+
+functions:
+  prepCTR:
+    handler: src/handlers/prepCTR.main
+    events:
+      - s3:
+          #bucket: sourcebucket todo
+          event: s3:ObjectCreated:*
+          rules:
+            - prefix: connect/ctr/
+          existing: true
+    environment:
+      redshiftObjectsBucket: "cats-prod-bucket"
+
+  loadCTR:
+    handler: src/handlers/loadCTR.main
+    vpc:
+      securityGroupIds:
+        -  #todo
+      subnetIds:
+        -  #todo
+    events:
+      - s3:
+          bucket: "staging-bucket"
+          event: s3:ObjectCreated:*
+          existing: true
+    environment:
+      host: "redshift-cluster-1"
+      user: "redshift"
+      password: "pwd"
+      #redshiftrole: Redshift Role todo
+      redshiftObjectsBucket: "s3://staging-bucket"
+
+plugins:
+  - serverless-esbuild
+custom:
+  esbuild:
+    bundle: true
+    exclude: ["pg-native"]

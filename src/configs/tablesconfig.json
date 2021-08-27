@@ -1,0 +1,24 @@
+{
+  "ctrrecord": [
+    "RecordId text",
+    "LastUpdatetimeStamp timestamptz",
+    "AWSAccountId text",
+    "AgentId text",
+    "QueueId text",
+    "Channel text",
+    "CustomerId text",
+    "AgentInteractionDuration int",
+    "CustomerHoldDuration int",
+    "ConnectedTimeStamp timestamptz",
+    "DisconnectedTimeStamp timestamptz",
+    "DisconnectedReason text",
+    "AgentConnectionAttempts int",
+    "InitiationMethod text",
+    "QueueDuration int",
+    "CustomerIntent text",
+    "WithVoiceMail boolean"
+  ],
+  "agent": ["AgentId text", "AgentUserName text"],
+  "customer": ["CustomerId text", "Type text", "Address text"],
+  "queue": ["QueueId text", "QueueName text"]
+}
