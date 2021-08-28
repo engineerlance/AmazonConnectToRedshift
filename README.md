@@ -1,6 +1,6 @@
 # Amazon Connect to Redshift
 
-_This project is a demo of how a kinesis stream from Amazon Connect(an omnichannel cloud contact center) can be modelled, normalized and copied to a data warehouse in the AWS Cloud, in this case Amazon Redshift._
+_This project is a demo of how a kinesis stream from Amazon Connect(an omnichannel cloud contact center) can be modelled, normalized and copied to a data warehouse in the AWS Cloud, in this case Amazon Redshift using AWS Lambda and trigger events._
 
 ## Table of Contents
 
